@@ -1,0 +1,17 @@
+{
+    "development" : {
+        "PORT" : 5000,
+        "MONGODB_URI" : "mongodb+srv://aspn:UmJnikEJS8cUjqM@cluster0.kl5gl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        "JWT_SECRET" : "SECRET#123",
+        "JWT_EXP" : "300m",
+        "ADMIN_EMAIL":"almialmi61621@gmail.com",
+        "ADMIN_PASSWORD":"indmshbedfobxdqt"
+    },
+    "production" :{
+        "PORT" : 80,
+        "MONGODB_URI" : "mongodb://xxxxx/DB_Name",
+        "JWT_SECRET" : "SECRET#123",
+        "JWT_EXP" : "30m"
+
+    }
+}

@@ -28,7 +28,8 @@ app.use(helmet());
 app.use('/api',rstIndex);
 app.use(limiter);
 
+const port = process.env.PORT || 5000
 
-app.listen(process.env.PORT,() => console.log('Server started at port:' + process.env.PORT));
+app.listen(port,() => console.log('Server started at port:' + process.env.PORT));
 
 
