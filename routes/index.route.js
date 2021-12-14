@@ -14,6 +14,7 @@ router.post('/userLogin',ctrlAdmin.userLogin);
 router.get('/fetchOwnProfile',jwtHelper.verifyJwtToken,ctrlAdmin.grantAccess("readOwn","profile"),ctrlAdmin.fetchOwnProfile);
 
 /*********************Product Section******************** */
+router.get('/check',ctrlAdmin.check);
 
 router.post('/createProduct',jwtHelper.verifyJwtToken,ctrlAdmin.grantAccess("createAny","product"),ctrlProduct.registerProduct);
 

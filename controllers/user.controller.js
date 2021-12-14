@@ -308,3 +308,7 @@ module.exports.fetchAllComment = async(req,res)=>{
      
 }
 
+module.exports.check = (req,res)=>{
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>Hello World</h1>');
+}
