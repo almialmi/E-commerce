@@ -27,7 +27,7 @@ const Products = ({cat,filters}) => {
     useEffect(() => {
         const getProducts = async ()=>{
             try{
-                const res = await axios.get(cat ? `http://localhost:5000/api/fetchAllProducts?category=${cat}&size=${-20}`:`http://localhost:5000/api/fetchAllProducts?size=${-20}`);
+                const res = await axios.get(cat ? `https://ecommercewebbackend.herokuapp.com/api/fetchAllProducts?category=${cat}&size=${-20}`:`http://localhost:5000/api/fetchAllProducts?size=${-20}`);
                 setProducts(res.data.Products);
             }catch(err){
 

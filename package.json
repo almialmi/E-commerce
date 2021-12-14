@@ -1,5 +1,5 @@
 {
-  "name": "new",
+  "name": "ecommercewebfront",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,5 +48,9 @@
   },
   "resolutions": {
     "styled-components": "^5"
+  },
+  "engines": {
+    "npm": "7.20.3",
+    "node": "12.21.0"
   }
 }

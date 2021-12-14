@@ -4,7 +4,7 @@ import {loginFailure, loginStart, loginSuccess,registerStart,registerSuccess,reg
 export const login = async (dispatch,user)=>{
     dispatch(loginStart());
     try{
-        const res = await axios.post(`http://localhost:5000/api/userLogin`,user);
+        const res = await axios.post(`https://ecommercewebbackend.herokuapp.com/api/userLogin`,user);
         dispatch(loginSuccess(res.data))
 
     }catch(err){
@@ -15,7 +15,7 @@ export const login = async (dispatch,user)=>{
 export const register =async (dispatch,user)=>{
     dispatch(registerStart());
     try{
-        const res = await axios.post(`http://localhost:5000/api/registerCustomer`,user);
+        const res = await axios.post(`https://ecommercewebbackend.herokuapp.com/api/registerCustomer`,user);
         dispatch(registerSuccess(res.data))
 
     }catch(err){

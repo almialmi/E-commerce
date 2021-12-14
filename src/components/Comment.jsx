@@ -91,7 +91,7 @@ const Comment = () => {
     }, [comment]);
 
     const handleClick = async ()=>{
-        await axios.post(`http://localhost:5000/api/addComment`,comment)
+        await axios.post(`https://ecommercewebbackend.herokuapp.com/api/addComment`,comment)
         .then((res)=>{
             setValue(res.data.message)
            setTimeout(() =>setValue(''), 3000);

@@ -68,23 +68,27 @@ const Product = ({item}) => {
     return (
         <Container>
             <Circle />
-            <Image src={`http://localhost:5000/api/${item.photo}`} />
+            <Image src={`https://ecommercewebbackend.herokuapp.com/api/${item.photo}`} />
             <Info>
-                <Link>
-                <Icon to={`/product/${item._id}`}>
+                
+                <Icon >
+                <Link  to={`/product/${item._id}`}>
                     <ShoppingCartOutlined />
-                </Icon>
                 </Link>
+                </Icon>
+                
                 <Icon>
                     <Link to={`/product/${item._id}`}>
                     <SearchOutlined />
                     </Link> 
                 </Icon>
-                <Link>
-                <Icon to={`/product/${item._id}`}>
+                
+                <Icon >
+                <Link to={`/product/${item._id}`}>
                     <FavoriteBorderOutlined />
-                </Icon>
                 </Link>
+                </Icon>
+                
                 
             </Info>
             
