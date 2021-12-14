@@ -8,7 +8,6 @@
         "ADMIN_PASSWORD":"indmshbedfobxdqt"
     },
     "production" :{
-        "PORT" : 5000,
         "MONGODB_URI" : "mongodb+srv://aspn:UmJnikEJS8cUjqM@cluster0.kl5gl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
         "JWT_SECRET" : "SECRET#123",
         "JWT_EXP" : "30m"
