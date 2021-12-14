@@ -28,6 +28,11 @@ app.use(helmet());
 app.use('/api',rstIndex);
 app.use(limiter);
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+  res.end()
+})
+
 const port = process.env.PORT || 5000
 
 app.listen(port,() => console.log('Server started at port:' + port));
