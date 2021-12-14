@@ -10,22 +10,23 @@ const rstIndex = require('./routes/index.route');
 const app = express();
 
 const limiter = rateLimit({
-    max: 100,
-    windowMs: 60 * 60 * 1000,
-    message: "Too many request"
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: "Too many request"
 });
 
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb',extended:true}));
-app.use(cors({
-    origin:['http://localhost:3000','https://ecommerceclientweb.herokuapp.com/'],
-    credentials: true
-  }));
-app.use('/api/productImages',express.static('productImages'))
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+app.use('/api/productImages', express.static('productImages'))
 app.use(cookieParser());
-app.use(mongoSanitize()); 
+app.use(mongoSanitize());
 app.use(helmet());
-app.use('/api',rstIndex);
+app.use('/api', rstIndex);
 app.use(limiter);
 
 app.get('/', (req, res) => {
@@ -35,6 +36,6 @@ app.get('/', (req, res) => {
 
 const port = process.env.PORT || 5000
 
-app.listen(port,() => console.log('Server started at port:' + port));
+app.listen(port, () => console.log('Server started at port:' + port));
 
 
