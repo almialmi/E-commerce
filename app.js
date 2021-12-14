@@ -24,6 +24,7 @@ app.use(function (req, res, next) {
   next();
 });
 app.use('/api/productImages', express.static('productImages'))
+app.use('/api/flutterImages', express.static('flutterImages'))
 app.use(cookieParser());
 app.use(mongoSanitize());
 app.use(helmet());
