@@ -84,7 +84,7 @@ module.exports.customerRegister = async (req, res, next) => {
                     { expiresIn: process.env.JWT_EXP });
     
                 res.cookie('token', token, {
-                    expires: new Date(Date.now() + 3000),
+                    expires: new Date(Date.now() + 3000000),
                     secure: false,
                     httpOnly: true,
                     sameSite: 'strict'
@@ -161,7 +161,7 @@ module.exports.userLogin = async (req, res, next) => {
                 { expiresIn: process.env.JWT_EXP });
 
             res.cookie('token', token, {
-                expires: new Date(Date.now() + 3000),
+                expires: new Date(Date.now() + 3000000),
                 secure: false,
                 httpOnly: true,
                 sameSite: 'strict'
